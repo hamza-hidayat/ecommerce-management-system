@@ -6,23 +6,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('orders', '0003_order_payment_method'),
+        ("orders", "0003_order_payment_method"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='order',
-            name='is_paid',
+            model_name="order",
+            name="is_paid",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='order',
-            name='received_by',
+            model_name="order",
+            name="received_by",
             field=models.CharField(blank=True, max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='order',
-            name='phone_number',
+            model_name="order",
+            name="phone_number",
             field=models.CharField(blank=True, max_length=20, null=True),
         ),
     ]

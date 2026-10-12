@@ -4,8 +4,9 @@ from apps.products.models import Product
 
 User = get_user_model()
 
+
 class Wishlist(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='wishlist')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="wishlist")
     products = models.ManyToManyField(Product, blank=True)
 
     def __str__(self):
